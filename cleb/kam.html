@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover movies, explore genres and find your next favorite film on CineMax.">
+  <title>CineMax | Discover Movies</title>
+  <link rel="stylesheet" href="code.css">
+  <script src="file.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="#">Cine<span>Max</span></a>
+
+    <nav>
+      <a class="active" href="#home">Home</a>
+      <a href="#movies">Movies</a>
+      <a href="#genres">Genres</a>
+    </nav>
+
+    <div class="nav-actions">
+      <label class="search-box">
+        <span>⌕</span>
+        <input id="searchInput" type="search"
+          placeholder="Search movies..." aria-label="Search movies">
+      </label>
+      <button class="profile" aria-label="Profile">C</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">CINEMAX ORIGINAL EXPERIENCE</p>
+        <h1>Stories that<br>stay with you.</h1>
+        <p class="hero-description">
+          Discover unforgettable adventures, legendary heroes
+          and worlds beyond imagination.
+        </p>
+        <div class="hero-meta">
+          <span class="rating">★ 9.0</span>
+          <span>Featured collection</span>
+          <span>HD</span>
+        </div>
+        <div class="hero-buttons">
+          <button class="btn btn-primary" id="exploreBtn">
+            Explore Movies <span>→</span>
+          </button>
+          <button class="btn btn-outline" id="featuredInfo">
+            More Info
+          </button>
+        </div>
+      </div>
+      <div class="hero-overlay"></div>
+    </section>
+
+    <section class="movie-section" id="movies">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">YOUR NEXT FAVORITE</p>
+          <h2>Trending Now</h2>
+        </div>
+        <span class="movie-count" id="movieCount"></span>
+      </div>
+
+      <div class="genre-list" id="genres">
+        <button class="genre active" data-genre="All">All Movies</button>
+        <button class="genre" data-genre="Action">Action</button>
+        <button class="genre" data-genre="Sci-Fi">Sci-Fi</button>
+        <button class="genre" data-genre="Drama">Drama</button>
+        <button class="genre" data-genre="Adventure">Adventure</button>
+      </div>
+
+      <div class="movie-grid" id="movieGrid"></div>
+      <p class="empty-message" id="emptyMessage" hidden>
+        No movies found. Try another search.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <a class="logo" href="#">Cine<span>Max</span></a>
+    <p>Discover stories. Experience cinema.</p>
+    <p class="copyright">© <span id="year"></span> CineMax. Demo project.</p>
+  </footer>
+
+  <dialog id="movieDialog">
+    <button class="dialog-close" id="closeDialog"
+      aria-label="Close movie details">✕</button>
+    <div id="dialogContent"></div>
+  </dialog>
+</body>
+</html>
